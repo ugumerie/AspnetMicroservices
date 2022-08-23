@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/Services/Catalog/Catalog.API/Catalog.API.csproj",
+                "${workspaceFolder}",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -46,12 +46,12 @@
             "dockerBuild": {
                 "tag": "src:dev",
                 "target": "base",
-                "dockerfile": "${workspaceFolder}/Services/Catalog/Catalog.API/Dockerfile",
+                "dockerfile": "${workspaceFolder}/Services/Discount/Discount.API/Dockerfile",
                 "context": "${workspaceFolder}",
                 "pull": true
             },
             "netCore": {
-                "appProject": "${workspaceFolder}/Services/Catalog/Catalog.API/Catalog.API.csproj"
+                "appProject": "${workspaceFolder}/Services/Discount/Discount.API/Discount.API.csproj"
             }
         },
         {
@@ -62,12 +62,12 @@
             ],
             "dockerBuild": {
                 "tag": "src:latest",
-                "dockerfile": "${workspaceFolder}/Services/Catalog/Catalog.API/Dockerfile",
+                "dockerfile": "${workspaceFolder}/Services/Discount/Discount.API/Dockerfile",
                 "context": "${workspaceFolder}",
                 "pull": true
             },
             "netCore": {
-                "appProject": "${workspaceFolder}/Services/Catalog/Catalog.API/Catalog.API.csproj"
+                "appProject": "${workspaceFolder}/Services/Discount/Discount.API/Discount.API.csproj"
             }
         },
         {
@@ -78,8 +78,9 @@
             ],
             "dockerRun": {},
             "netCore": {
-                "appProject": "${workspaceFolder}/Services/Catalog/Catalog.API/Catalog.API.csproj",
-                "enableDebugging": true
+                "appProject": "${workspaceFolder}/Services/Discount/Discount.API/Discount.API.csproj",
+                "enableDebugging": true,
+                "configureSsl": false
             }
         },
         {
@@ -90,7 +91,7 @@
             ],
             "dockerRun": {},
             "netCore": {
-                "appProject": "${workspaceFolder}/Services/Catalog/Catalog.API/Catalog.API.csproj"
+                "appProject": "${workspaceFolder}/Services/Discount/Discount.API/Discount.API.csproj"
             }
         }
     ]
