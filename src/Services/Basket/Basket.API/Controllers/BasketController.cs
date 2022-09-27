@@ -25,7 +25,7 @@ public class BasketController : ControllerBase
 
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status200OK)]
-    public async Task<ActionResult<ShoppingCart?>> UpdateBasket(ShoppingCart basket) 
+    public async Task<ActionResult<ShoppingCart?>> UpdateBasket(ShoppingCart basket)
         => await _repository.UpdateBasket(basket);
 
     [HttpDelete("{username}", Name = "DeleteBasket")]
