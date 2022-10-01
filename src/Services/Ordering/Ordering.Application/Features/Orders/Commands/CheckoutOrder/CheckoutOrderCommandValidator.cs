@@ -13,7 +13,7 @@ public class CheckoutOrderCommandValidator : AbstractValidator<CheckoutOrderComm
 
         RuleFor(p => p.EmailAddress)
             .NotEmpty().WithMessage("{EmailAddress} is required.");
-        
+
         RuleFor(p => p.TotalPrice)
             .NotEmpty().WithMessage("{TotalPrice} is required.")
             .GreaterThan(0).WithMessage("{TotalPrice} should be greater than zero.");
