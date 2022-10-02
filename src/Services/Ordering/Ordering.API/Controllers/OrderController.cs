@@ -26,7 +26,7 @@ public class OrderController : ControllerBase
         var orders = await _mediator.Send(query);
 
         return orders;
-    } 
+    }
 
     // testing purpose => will be triggered by the rabbitMq
     [HttpPost(Name = "CheckoutOrder")]
